@@ -45,25 +45,23 @@ const Banner: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
       </div>
 
-      <AnimatePresence mode="wait">
-        {nextImage !== currentImage && (
-          <motion.div
-            key={nextImage}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0"
-          >
-            <img
-              src={images[nextImage]}
-              alt="Sauna"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {nextImage !== currentImage && (
+        <motion.div
+          key={nextImage}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+          <img
+            src={images[nextImage]}
+            alt="Sauna"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        </motion.div>
+      )}
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
