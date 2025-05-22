@@ -1,0 +1,49 @@
+@import '../../styles/palette';
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  .icon {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &.primary {
+    background-color: rgba($color-accent, 0.1);
+    color: $color-accent;
+  }
+
+  &.secondary {
+    background-color: rgba($color-text, 0.1);
+    color: $color-text;
+  }
+
+  &.success {
+    background-color: rgba($color-success, 0.1);
+    color: $color-success;
+  }
+
+  &.warning {
+    background-color: rgba($color-warning, 0.1);
+    color: $color-warning;
+  }
+
+  &.error {
+    background-color: rgba($color-error, 0.1);
+    color: $color-error;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+} 

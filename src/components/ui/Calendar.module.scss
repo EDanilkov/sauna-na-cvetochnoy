@@ -1,0 +1,96 @@
+@import '../../styles/palette';
+
+.calendar {
+  background: $color-card;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.monthTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-text;
+  text-transform: capitalize;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: $color-text;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($color-text, 0.1);
+  }
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $color-text-secondary;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: $color-text;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover:not(.disabled) {
+    background: rgba($color-accent, 0.1);
+  }
+
+  &.selected {
+    background: $color-accent;
+    color: white;
+  }
+
+  &.today {
+    border: 2px solid $color-accent;
+  }
+
+  &.otherMonth {
+    color: $color-text-secondary;
+  }
+
+  &.disabled {
+    color: $color-text-disabled;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+} 

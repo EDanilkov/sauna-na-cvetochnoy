@@ -1,0 +1,32 @@
+// Современная типографика для SPA
+$font-main: 'Inter', 'Montserrat', 'Nunito', Arial, sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 32px;
+$font-size-xxl: 44px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$letter-spacing-wide: 0.03em;
+
+@mixin heading-xl {
+  font-family: $font-main;
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-wide;
+  line-height: 1.1;
+}
+
+@mixin heading-lg {
+  font-family: $font-main;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-wide;
+  line-height: 1.15;
+}
+
+@mixin text-base {
+  font-family: $font-main;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: 1.5;
+} 

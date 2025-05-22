@@ -1,0 +1,62 @@
+@import '../../styles/palette';
+@import '../../styles/typography';
+
+.wrapper {
+  width: 100%;
+  margin-bottom: 1.2em;
+}
+.label {
+  display: block;
+  margin-bottom: 0.4em;
+  color: $color-text-dark;
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.01em;
+}
+.inputBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.withIcon .input {
+  padding-left: 2.5em;
+}
+.icon {
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color-green;
+  font-size: 1.2em;
+  pointer-events: none;
+}
+.input {
+  width: 100%;
+  border-radius: 1.2em;
+  border: 1.5px solid $color-green;
+  background: $color-bg-light;
+  color: $color-text-dark;
+  font-family: $font-main;
+  font-size: 1.08rem;
+  padding: 0.9em 1.2em;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  &:focus {
+    border-color: $color-accent;
+    box-shadow: 0 0 0 2px rgba($color-accent, 0.12);
+  }
+  &::placeholder {
+    color: $color-green;
+    opacity: 1;
+    font-size: 1em;
+  }
+}
+.error {
+  border-color: $color-error !important;
+}
+.errorMsg {
+  color: $color-error;
+  font-size: 0.95em;
+  margin-top: 0.3em;
+  font-weight: 500;
+} 

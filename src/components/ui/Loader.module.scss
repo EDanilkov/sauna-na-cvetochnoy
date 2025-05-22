@@ -1,0 +1,14 @@
+@import '../../styles/palette';
+
+.loader {
+  display: inline-block;
+  border: 3px solid $color-card;
+  border-top: 3px solid $color-accent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  box-sizing: border-box;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
